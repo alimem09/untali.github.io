@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математика викторинасы</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-calculator"></i>
+                <h1>Quiz</h1>
+            </div>
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span id="current-question">0</span> / <span id="total-questions">0</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="quiz-container">
+            <!-- Экран старта -->
+            <div id="start-screen" class="screen active">
+                <div class="start-content">
+                    <h2>Викторина</h2>
+                    <p>Негр негр негр</p>
+                    
+                    <div class="categories">
+                        <div class="category selected" data-category="all">
+                            <i class="fas fa-globe"></i>
+                            <span>Барлығы</span>
+                        </div>
+                        <div class="category" data-category="Тарих">
+                            <i class="fas fa-history"></i>
+                            <span>Тарих</span>
+                        </div>
+                        <div class="category" data-category="Тригонометрия">
+                            <i class="fas fa-superscript"></i>
+                            <span>Тригонометрия</span>
+                        </div>
+                        <div class="category" data-category="Алгебра">
+                            <i class="fas fa-square-root-alt"></i>
+                            <span>Алгебра</span>
+                        </div>
+                        <div class="category" data-category="Геометрия">
+                            <i class="fas fa-shapes"></i>
+                            <span>Геометрия</span>
+                        </div>
+                    </div>
+                    
+                    <button id="start-btn" class="btn primary-btn">
+                        <i class="fas fa-play"></i> Викторинаны бастау
+                    </button>
+                </div>
+            </div>
+
+            <!-- Экран вопроса -->
+            <div id="question-screen" class="screen">
+                <div class="question-header">
+                    <div class="category-tag" id="question-category">Категория</div>
+                    <div class="question-counter">Сұрақ <span id="question-number">1</span></div>
+                </div>
+                
+                <div class="question-content">
+                    <h3 id="question-text">Сұрақ мәтіні...</h3>
+                    
+                    <div class="options" id="options-container">
+                        <!-- Варианты ответов будут здесь -->
+                    </div>
+                </div>
+                
+                <div class="navigation">
+                    <button id="prev-btn" class="btn secondary-btn">
+                        <i class="fas fa-arrow-left"></i> Алдыңғы
+                    </button>
+                    <button id="next-btn" class="btn primary-btn">
+                        Келесі <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button id="submit-btn" class="btn success-btn" style="display: none;">
+                        <i class="fas fa-check"></i> Аяқтау
+                    </button>
+                </div>
+            </div>
+
+            <!-- Экран результатов -->
+            <div id="result-screen" class="screen">
+                <div class="result-content">
+                    <h2>Нәтижелер</h2>
+                    
+                    <div class="score-circle">
+                        <div class="circle">
+                            <span id="score-percent">0%</span>
+                        </div>
+                        <div class="score-text" id="score-count">0/0</div>
+                    </div>
+                    
+                    <div class="result-stats">
+                        <div class="stat correct">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <span class="stat-label">Дұрыс</span>
+                                <span class="stat-value" id="correct-answers">0</span>
+                            </div>
+                        </div>
+                        <div class="stat wrong">
+                            <i class="fas fa-times-circle"></i>
+                            <div>
+                                <span class="stat-label">Қате</span>
+                                <span class="stat-value" id="wrong-answers">0</span>
+                            </div>
+                        </div>
+                        <div class="stat skipped">
+                            <i class="fas fa-forward"></i>
+                            <div>
+                                <span class="stat-label">Өткізілген</span>
+                                <span class="stat-value" id="skipped-answers">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-actions">
+                        <button id="restart-btn" class="btn primary-btn">
+                            <i class="fas fa-redo"></i> Қайта бастау
+                        </button>
+                        <button id="review-btn" class="btn secondary-btn">
+                            <i class="fas fa-list"></i> Жауаптарды қарау
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Экран просмотра ответов -->
+            <div id="review-screen" class="screen">
+                <div class="review-content">
+                    <div class="review-header">
+                        <h2><i class="fas fa-list-check"></i> Жауаптарды қарау</h2>
+                        <button id="back-btn" class="btn secondary-btn">
+                            <i class="fas fa-arrow-left"></i> Артқа
+                        </button>
+                    </div>
+                    
+                    <div class="review-questions" id="questions-review">
+                        <!-- Вопросы с ответами будут здесь -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p>© 2025 Quiz. Викторина</p>
+        </footer>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
