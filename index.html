@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Математика викторинасы</title>
+    <title>Тарих викторинасы</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -12,8 +12,8 @@
         <!-- Шапка -->
         <header class="header">
             <div class="logo">
-                <i class="fas fa-calculator"></i>
-                <h1>Quiz</h1>
+                <i class="fas fa-history"></i>
+                <h1>Тарих Викторинасы</h1>
             </div>
             <div class="progress-container">
                 <div class="progress-info">
@@ -30,29 +30,13 @@
             <!-- Экран старта -->
             <div id="start-screen" class="screen active">
                 <div class="start-content">
-                    <h2>Викторина</h2>
-                    <p>Негр негр негр</p>
+                    <h2>Тарих викторинасы</h2>
+                    <p>Түркі қағанаттары тарихы бойынша 20 сұрақтық викторина</p>
                     
                     <div class="categories">
-                        <div class="category selected" data-category="all">
-                            <i class="fas fa-globe"></i>
-                            <span>Барлығы</span>
-                        </div>
-                        <div class="category" data-category="Тарих">
+                        <div class="category selected" data-category="Тарих">
                             <i class="fas fa-history"></i>
                             <span>Тарих</span>
-                        </div>
-                        <div class="category" data-category="Тригонометрия">
-                            <i class="fas fa-superscript"></i>
-                            <span>Тригонометрия</span>
-                        </div>
-                        <div class="category" data-category="Алгебра">
-                            <i class="fas fa-square-root-alt"></i>
-                            <span>Алгебра</span>
-                        </div>
-                        <div class="category" data-category="Геометрия">
-                            <i class="fas fa-shapes"></i>
-                            <span>Геометрия</span>
                         </div>
                     </div>
                     
@@ -65,7 +49,10 @@
             <!-- Экран вопроса -->
             <div id="question-screen" class="screen">
                 <div class="question-header">
-                    <div class="category-tag" id="question-category">Категория</div>
+                    <div class="question-info">
+                        <div class="category-tag" id="question-category">Тарих</div>
+                        <div class="question-type" id="question-type">Бір жауап</div>
+                    </div>
                     <div class="question-counter">Сұрақ <span id="question-number">1</span></div>
                 </div>
                 
@@ -156,7 +143,7 @@
 
         <!-- Подвал -->
         <footer class="footer">
-            <p>© 2025 Quiz. Викторина</p>
+            <p>© 2025 Тарих Викторинасы. Түркі қағанаттары тарихы</p>
         </footer>
     </div>
 
